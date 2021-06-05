@@ -17,8 +17,8 @@
 /* HEADER */
 @keyframes rotate-hue {
     0% {filter: hue-rotate(10deg);}
-    50% {filter: hue-rotate(-40deg);}
-    100% {filter: hue-rotate(10deg);}
+    50% {filter: hue-rotate(-30deg);}
+    100% {filter: hue-rotate(20deg);}
 }
 
 .header {
@@ -29,7 +29,7 @@
     background: rgb(34,71,195);
     background: radial-gradient(circle, rgba(34,71,195,1) 0%, rgba(107,164,167,1) 26%, rgba(182,184,120,1) 50%, rgba(206,210,83,1) 75%, rgba(253,200,45,1) 100%);
     background-size: 220%;
-    background-position: top right;
+    background-position: bottom left;
     animation: rotate-hue 5s linear 0ms infinite;
 }
 
@@ -38,6 +38,9 @@
 }
 
 /* SEARCH SIDEBAR */
+.search-title {
+    font-weight: 400;
+}
 #search-btn {
     background: rgb(0,86,213);
     background: linear-gradient(0deg, rgba(0,86,213,1) 35%, rgba(0,212,255,1) 100%);
