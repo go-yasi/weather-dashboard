@@ -46,5 +46,19 @@
 }
 
 
+/* WEATHER FORECAST */
+#weather-forecast {
+    padding: 1vw 2vw;
+}
 
+#current-weather {
+    border: 1px solid pink;
+    padding: 1vw 0;
+    margin: 1vw auto;
+}
 
+#five-day {
+    border: 1px solid green;
+    padding: 1vw 0;
+    margin: 1vw auto;
+}
