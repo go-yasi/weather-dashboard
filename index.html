@@ -21,8 +21,8 @@
     <main class="container">
         <div class="row">
             <!-- Search Sidebar (LEFT) -->
-            <div class="col-sm-4" id="search-sidebar">
-                <h2>Search for a City:</h2>
+            <div class="col-sm-3" id="search-sidebar">
+                <h4 class="mt-3">Search for a City:</h4>
                 <!-- Search Input -->
                 <input id="search-input" class="form-input w-100" type="text" placeholder="Enter City Name">
                 <!-- Search Button -->
@@ -32,11 +32,38 @@
             </div>
 
             <!-- Weather Forecast (RIGHT) -->
-            <div class="col-sm-8" id="weather-ƒorecast">
+            <div class="col-sm-9" id="weather-ƒorecast">
                 <!-- Current Weather Display -->
-                <div id="current-weather">ex</div>
+                <div id="current-weather">
+                    <div class="current-header">
+                        <h1 class="current-city">Los Angeles</h1>
+                        <h6 class="current-date mt-2"><em>Saturday, May 22, 2021</em></h6>
+                        <img class="current-icon" src="./assets/favicon/weather-app-favicon.png" alt="" width="40" height="40">
+                    </div>
+                    <div class="current-info mt-4">
+                        <p class="temp">Temp: </p>
+                        <p class="wind"> Wind: </p>
+                        <p class="humid">Humidity: </p>
+                        <p class="uv">UV Index: </p>
+                    </div>        
+                </div>
                 <!-- Five-Day Forecast Display -->
-                <div id="five-day">ex</div>
+                <div id="five-day">
+                    <h4 class="five-day-header">5-Day Forecast:</h4>
+                    <div class="five-day-blocks">
+                        <div class="block block-1">
+                            <div class="5-date">Date</div>
+                            <img class="5-icon" src="./assets/favicon/weather-app-favicon.png" alt="" width="30" height="30">
+                            <div class="5-temp">Temp</div>
+                            <div class="5-wind">Wind</div>
+                            <div class="5-hum">Hum</div> 
+                        </div>
+                        <div class="block block-2"></div>
+                        <div class="block block-3"></div>
+                        <div class="block block-4"></div>
+                        <div class="block block-5"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
