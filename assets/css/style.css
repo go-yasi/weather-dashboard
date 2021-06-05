@@ -9,6 +9,22 @@
     border: 1px solid red;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw 0;
+    background: rgb(34,71,195);
+    background: radial-gradient(circle, rgba(34,71,195,1) 0%, rgba(107,164,167,1) 26%, rgba(182,184,120,1) 50%, rgba(206,210,83,1) 75%, rgba(253,200,45,1) 100%);
+    background-size: 200%;
+    background-position: top left;
+}
+
+.main-logo {
+    margin-left: 1vw;
+}
+
+
 
 
 
