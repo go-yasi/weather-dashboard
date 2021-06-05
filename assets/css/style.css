@@ -1,5 +1,10 @@
+/* GLOBAL STYLES */
 * {
     box-sizing:border-box;
+}
+
+.container {
+    max-width: none !important;
 }
 
 .col-sm-8 {
@@ -9,6 +14,13 @@
     border: 1px solid red;
 }
 
+/* HEADER */
+@keyframes rotate-hue {
+    0% {filter: hue-rotate(10deg);}
+    50% {filter: hue-rotate(-40deg);}
+    100% {filter: hue-rotate(10deg);}
+}
+
 .header {
     display: flex;
     justify-content: center;
@@ -16,39 +28,23 @@
     padding: 2vw 0;
     background: rgb(34,71,195);
     background: radial-gradient(circle, rgba(34,71,195,1) 0%, rgba(107,164,167,1) 26%, rgba(182,184,120,1) 50%, rgba(206,210,83,1) 75%, rgba(253,200,45,1) 100%);
-    background-size: 200%;
-    background-position: top left;
+    background-size: 220%;
+    background-position: top right;
+    animation: rotate-hue 5s linear 0ms infinite;
 }
 
 .main-logo {
     margin-left: 1vw;
 }
 
-
-
-
-
-
-/* Resetting Bootstrap page widths */
-@media (min-width: 576px) {
-    .container {
-        max-width: 576px;
-    }
+/* SEARCH SIDEBAR */
+#search-btn {
+    background: rgb(0,86,213);
+    background: linear-gradient(0deg, rgba(0,86,213,1) 35%, rgba(0,212,255,1) 100%);
+    color: white;
+    margin: 10px auto;
 }
-@media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
-@media (min-width: 992px) {
-    .container {
-        max-width: 992px;
-    }
-}
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-    }
-}
+
+
 
 
