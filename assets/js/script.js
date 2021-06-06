@@ -7,7 +7,7 @@ var weatherForecast = document.querySelector("#weather-forecast");
 var currentWeather = document.querySelector("#current-weather");
 var fiveDay = document.querySelector("#five-day");
 
-function displayCurrentWeather(){
+function displayCurrentWeather() {
     // create "current weather" header div
     var currentHeader = document.createElement("div");
     currentHeader.className = "current-header";
@@ -64,6 +64,29 @@ function displayCurrentWeather(){
     currentWeather.appendChild(currentHeader);
     currentWeather.appendChild(currentInfo);
 
-}
+};
 
 displayCurrentWeather()
+
+function displayFiveDay() {
+    // create five day header
+    var fiveDayHeader = document.createElement("h4");
+    fiveDayHeader.className = "five-day-header";
+    fiveDayHeader.textContent = "5-Day Forecast:";
+
+    // append to five day div
+    fiveDay.appendChild(fiveDayHeader);
+
+    // create five day blocks div
+    var fiveDayBlocks = document.createElement("div");
+    fiveDayBlocks.className = "five-day-blocks";
+
+    // add content to block 2
+    var blockTwoDate = document.querySelector(".b2-date");
+    blockTwoDate.textContent = "New Date";
+
+
+
+};
+
+displayFiveDay();
