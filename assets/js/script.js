@@ -1,15 +1,16 @@
 // current date via moment
 var today = moment().format("dddd, MMMM Do, YYYY");
 
-// elements from HTML
+// create variables from elements in HTML
 var weatherForecast = document.querySelector("#weather-forecast");
 var currentWeather = document.querySelector("#current-weather");
 var fiveDay = document.querySelector("#five-day");
+var searchBtn = document.querySelector("#search-btn")
 
 function displayCurrentWeather() {
     // make section appear
     currentWeather.style.display = "block";
-    
+
     // create "current weather" header div
     var currentHeader = document.createElement("div");
     currentHeader.className = "current-header";
@@ -66,9 +67,10 @@ function displayCurrentWeather() {
     currentWeather.appendChild(currentHeader);
     currentWeather.appendChild(currentInfo);
 
+    // run five day forecast
+    displayFiveDay();
 };
 
-displayCurrentWeather();
 
 function displayFiveDay() {
     // make section appear
@@ -165,4 +167,7 @@ function displayFiveDay() {
 
 };
 
-displayFiveDay();
+
+searchBtn.addEventListener("click", displayCurrentWeather);
+
+
