@@ -28,7 +28,7 @@ function displayCurrentWeather() {
     // create "current weather" header icon
     var currentIcon = document.createElement("img");
     currentIcon.className = "current-icon";
-    currentIcon.src = "/assets/favicon/weather-app-favicon.png";
+    currentIcon.src = "./assets/favicon/weather-app-favicon.png";
     currentIcon.style.width = "50px";
 
     // add elements to current header div
