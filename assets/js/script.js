@@ -69,7 +69,7 @@ function displayCurrentWeather() {
 displayCurrentWeather();
 
 function displayFiveDay() {
-    // add content to block 1
+    // *-------  BLOCK 1 -------*
     // new date
     var blockOneDate = document.querySelector(".b1-date");
     blockOneDate.textContent = moment().add(1, "d").format("ddd M/DD");
@@ -79,8 +79,14 @@ function displayFiveDay() {
     // temperature
     var blockOneTemp = document.querySelector(".b1-temp");
     blockOneTemp.textContent = "Temp:  " + "XX" + "°F";
+    // wind
+    var blockOneWind = document.querySelector(".b1-wind");
+    blockOneWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    // humidity
+    var blockOneHumid = document.querySelector(".b1-humid");
+    blockOneHumid.textContent = "Humidity:  " + "XX" + "%";
 
-    // add content to block 2
+    // *-------  BLOCK 2 -------*
     // new date
     var blockTwoDate = document.querySelector(".b2-date");
     blockTwoDate.textContent = moment().add(2, "d").format("ddd M/DD");
@@ -90,8 +96,11 @@ function displayFiveDay() {
     // temperature
     var blockTwoTemp = document.querySelector(".b2-temp");
     blockTwoTemp.textContent = "Temp:  " + "XX" + "°F";
+    // wind
+    var blockTwoWind = document.querySelector(".b2-wind");
+    blockTwoWind.textContent = "Wind:  " + "XX.X" + " MPH";
 
-    // add content to block 3
+    // *-------  BLOCK 3 -------*
     // new date
     var blockThreeDate = document.querySelector(".b3-date");
     blockThreeDate.textContent = moment().add(3, "d").format("ddd M/DD");
@@ -101,8 +110,11 @@ function displayFiveDay() {
     // temperature
     var blockThreeTemp = document.querySelector(".b3-temp");
     blockThreeTemp.textContent = "Temp:  " + "XX" + "°F";
+    // wind
+    var blockThreeWind = document.querySelector(".b3-wind");
+    blockThreeWind.textContent = "Wind:  " + "XX.X" + " MPH";
 
-    // add content to block 4
+    // *-------  BLOCK 4 -------*
     // new date
     var blockFourDate = document.querySelector(".b4-date");
     blockFourDate.textContent = moment().add(4, "d").format("ddd M/DD");
@@ -112,8 +124,11 @@ function displayFiveDay() {
     // temperature
     var blockFourTemp = document.querySelector(".b4-temp");
     blockFourTemp.textContent = "Temp:  " + "XX" + "°F";
+    // wind
+    var blockFourWind = document.querySelector(".b4-wind");
+    blockFourWind.textContent = "Wind:  " + "XX.X" + " MPH";
 
-    // add content to block 5
+    // *-------  BLOCK 5 -------*
     // new date
     var blockFiveDate = document.querySelector(".b5-date");
     blockFiveDate.textContent = moment().add(5, "d").format("ddd M/DD");
@@ -123,6 +138,9 @@ function displayFiveDay() {
     // temperature
     var blockFiveTemp = document.querySelector(".b5-temp");
     blockFiveTemp.textContent = "Temp:  " + "XX" + "°F";
+    // wind
+    var blockFiveWind = document.querySelector(".b5-wind");
+    blockFiveWind.textContent = "Wind:  " + "XX.X" + " MPH";
 
 };
 
