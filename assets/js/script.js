@@ -66,33 +66,48 @@ function displayCurrentWeather() {
 
 };
 
-displayCurrentWeather()
+displayCurrentWeather();
 
 function displayFiveDay() {
     // add content to block 1
     // new date
     var blockOneDate = document.querySelector(".b1-date");
     blockOneDate.textContent = moment().add(1, "d").format("ddd M/DD");
+    // weather icon
+    var blockOneIcon = document.querySelector(".b1-icon");
+    blockOneIcon.src = "/assets/favicon/weather-app-favicon.png"
 
     // add content to block 2
     // new date
     var blockTwoDate = document.querySelector(".b2-date");
     blockTwoDate.textContent = moment().add(2, "d").format("ddd M/DD");
+    // weather icon
+    var blockTwoIcon = document.querySelector(".b2-icon");
+    blockTwoIcon.src = "/assets/favicon/weather-app-favicon.png"
 
     // add content to block 3
     // new date
     var blockThreeDate = document.querySelector(".b3-date");
     blockThreeDate.textContent = moment().add(3, "d").format("ddd M/DD");
+    // weather icon
+    var blockThreeIcon = document.querySelector(".b3-icon");
+    blockThreeIcon.src = "/assets/favicon/weather-app-favicon.png"
 
     // add content to block 4
     // new date
     var blockFourDate = document.querySelector(".b4-date");
     blockFourDate.textContent = moment().add(4, "d").format("ddd M/DD");
+    // weather icon
+    var blockFourIcon = document.querySelector(".b4-icon");
+    blockFourIcon.src = "/assets/favicon/weather-app-favicon.png"
 
     // add content to block 5
     // new date
     var blockFiveDate = document.querySelector(".b5-date");
     blockFiveDate.textContent = moment().add(5, "d").format("ddd M/DD");
+    // weather icon
+    var blockFiveIcon = document.querySelector(".b5-icon");
+    blockFiveIcon.src = "/assets/favicon/weather-app-favicon.png"
 
 };
 
