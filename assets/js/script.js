@@ -17,7 +17,8 @@ function displayCurrentWeather() {
 
     // create "current weather" header city name
     var currentCity = document.createElement("h1");
-    currentCity.className = "current-city display-5";
+    currentCity.className = "current-city display-6";
+    currentCity.textContent = "Example City Name";
 
     // create "current weather" header date
     var currentDate = document.createElement("h5");
@@ -27,6 +28,8 @@ function displayCurrentWeather() {
     // create "current weather" header icon
     var currentIcon = document.createElement("img");
     currentIcon.className = "current-icon";
+    currentIcon.src = "/assets/favicon/weather-app-favicon.png";
+    currentIcon.style.width = "50px";
 
     // add elements to current header div
     currentHeader.appendChild(currentCity);
@@ -100,7 +103,7 @@ function displayFiveDay() {
     blockTwoDate.textContent = moment().add(2, "d").format("ddd M/DD");
     // weather icon
     var blockTwoIcon = document.querySelector(".b2-icon");
-    blockTwoIcon.src = "/assets/favicon/weather-app-favicon.png"
+    blockTwoIcon.src = "./assets/favicon/weather-app-favicon.png"
     // temperature
     var blockTwoTemp = document.querySelector(".b2-temp");
     blockTwoTemp.textContent = "Temp:  " + "XX" + "°F";
@@ -118,7 +121,7 @@ function displayFiveDay() {
     blockThreeDate.textContent = moment().add(3, "d").format("ddd M/DD");
     // weather icon
     var blockThreeIcon = document.querySelector(".b3-icon");
-    blockThreeIcon.src = "/assets/favicon/weather-app-favicon.png"
+    blockThreeIcon.src = "./assets/favicon/weather-app-favicon.png"
     // temperature
     var blockThreeTemp = document.querySelector(".b3-temp");
     blockThreeTemp.textContent = "Temp:  " + "XX" + "°F";
@@ -136,7 +139,7 @@ function displayFiveDay() {
     blockFourDate.textContent = moment().add(4, "d").format("ddd M/DD");
     // weather icon
     var blockFourIcon = document.querySelector(".b4-icon");
-    blockFourIcon.src = "/assets/favicon/weather-app-favicon.png"
+    blockFourIcon.src = "./assets/favicon/weather-app-favicon.png"
     // temperature
     var blockFourTemp = document.querySelector(".b4-temp");
     blockFourTemp.textContent = "Temp:  " + "XX" + "°F";
@@ -154,7 +157,7 @@ function displayFiveDay() {
     blockFiveDate.textContent = moment().add(5, "d").format("ddd M/DD");
     // weather icon
     var blockFiveIcon = document.querySelector(".b5-icon");
-    blockFiveIcon.src = "/assets/favicon/weather-app-favicon.png"
+    blockFiveIcon.src = "./assets/favicon/weather-app-favicon.png"
     // temperature
     var blockFiveTemp = document.querySelector(".b5-temp");
     blockFiveTemp.textContent = "Temp:  " + "XX" + "°F";

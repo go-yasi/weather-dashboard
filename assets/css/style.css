@@ -3,9 +3,14 @@
     box-sizing:border-box;
 }
 
+body {
+    background: rgb(240, 246, 255);
+}
+
 .container {
     max-width: none !important;
 }
+
 
 .col-sm-8 {
     border: 1px solid blue;
@@ -31,7 +36,7 @@
     background: radial-gradient(circle, rgba(34,71,195,1) 0%, rgba(107,164,167,1) 26%, rgba(182,184,120,1) 50%, rgba(206,210,83,1) 75%, rgba(253,200,45,1) 100%);
     background-size: 220%;
     background-position: bottom left;
-    animation: rotate-hue 5s linear 0ms infinite;
+    animation: rotate-hue 4s linear 0ms infinite;
 }
 
 .main-logo {
@@ -44,7 +49,7 @@
 }
 #search-btn {
     background: rgb(0,86,213);
-    background: linear-gradient(0deg, rgba(0,86,213,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(0deg, rgb(28, 94, 156) 35%, rgba(0, 182, 214, 0.959) 100%);
     color: white;
     margin: 10px auto;
 }
@@ -68,11 +73,23 @@
     /* justify-content: space-between; */
 }
 
+.current-date {
+    font-weight: 400;
+}
+
+.current-info {
+    text-align: center;
+}
+
 #five-day {
     padding: 2vw 0 3vw;
     border-top: 2px solid #ccc;
     border-bottom: 2px solid #ccc;
     display: none;
+}
+
+.five-day-header {
+    font-weight: 400;
 }
 
 .five-day-blocks {
@@ -97,7 +114,7 @@
     background-color: white;
     color: #083147;
     width: 80%;
-    font-size: 1.4vw;
+    font-size: 1.3vw;
     text-align: center;
     padding: .4em 0;
     border-radius: 8px;
