@@ -1,6 +1,6 @@
 // current date via moment
-var momentDate = moment().format("MMMM Do, YYYY");
-console.log(momentDate);
+var today = moment().format("dddd, MMMM Do, YYYY");
+console.log(today);
 
 // elements from HTML
 var weatherForecast = document.querySelector("#weather-forecast");
@@ -19,7 +19,7 @@ function displayCurrentWeather() {
     // create "current weather" header date
     var currentDate = document.createElement("h5");
     currentDate.className = "current-date mt-2";
-    currentDate.textContent = momentDate;
+    currentDate.textContent = today;
 
     // create "current weather" header icon
     var currentIcon = document.createElement("img");
@@ -69,23 +69,30 @@ function displayCurrentWeather() {
 displayCurrentWeather()
 
 function displayFiveDay() {
-    // create five day header
-    var fiveDayHeader = document.createElement("h4");
-    fiveDayHeader.className = "five-day-header";
-    fiveDayHeader.textContent = "5-Day Forecast:";
-
-    // append to five day div
-    fiveDay.appendChild(fiveDayHeader);
-
-    // create five day blocks div
-    var fiveDayBlocks = document.createElement("div");
-    fiveDayBlocks.className = "five-day-blocks";
+    // add content to block 1
+    // new date
+    var blockOneDate = document.querySelector(".b1-date");
+    blockOneDate.textContent = moment().add(1, "d").format("ddd M/DD");
 
     // add content to block 2
+    // new date
     var blockTwoDate = document.querySelector(".b2-date");
-    blockTwoDate.textContent = "New Date";
+    blockTwoDate.textContent = moment().add(2, "d").format("ddd M/DD");
 
+    // add content to block 3
+    // new date
+    var blockThreeDate = document.querySelector(".b3-date");
+    blockThreeDate.textContent = moment().add(3, "d").format("ddd M/DD");
 
+    // add content to block 4
+    // new date
+    var blockFourDate = document.querySelector(".b4-date");
+    blockFourDate.textContent = moment().add(4, "d").format("ddd M/DD");
+
+    // add content to block 5
+    // new date
+    var blockFiveDate = document.querySelector(".b5-date");
+    blockFiveDate.textContent = moment().add(5, "d").format("ddd M/DD");
 
 };
 
