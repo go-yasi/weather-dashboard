@@ -1,6 +1,5 @@
 // current date via moment
 var today = moment().format("dddd, MMMM Do, YYYY");
-console.log(today);
 
 // elements from HTML
 var weatherForecast = document.querySelector("#weather-forecast");
@@ -86,6 +85,7 @@ function displayFiveDay() {
     var blockOneHumid = document.querySelector(".b1-humid");
     blockOneHumid.textContent = "Humidity:  " + "XX" + "%";
 
+
     // *-------  BLOCK 2 -------*
     // new date
     var blockTwoDate = document.querySelector(".b2-date");
@@ -99,6 +99,10 @@ function displayFiveDay() {
     // wind
     var blockTwoWind = document.querySelector(".b2-wind");
     blockTwoWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    // humidity
+    var blockTwoHumid = document.querySelector(".b2-humid");
+    blockTwoHumid.textContent = "Humidity:  " + "XX" + "%";
+
 
     // *-------  BLOCK 3 -------*
     // new date
@@ -113,6 +117,10 @@ function displayFiveDay() {
     // wind
     var blockThreeWind = document.querySelector(".b3-wind");
     blockThreeWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    // humidity
+    var blockThreeHumid = document.querySelector(".b3-humid");
+    blockThreeHumid.textContent = "Humidity:  " + "XX" + "%";
+
 
     // *-------  BLOCK 4 -------*
     // new date
@@ -127,6 +135,10 @@ function displayFiveDay() {
     // wind
     var blockFourWind = document.querySelector(".b4-wind");
     blockFourWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    // humidity
+    var blockFourHumid = document.querySelector(".b4-humid");
+    blockFourHumid.textContent = "Humidity:  " + "XX" + "%";
+
 
     // *-------  BLOCK 5 -------*
     // new date
@@ -141,6 +153,9 @@ function displayFiveDay() {
     // wind
     var blockFiveWind = document.querySelector(".b5-wind");
     blockFiveWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    // humidity
+    var blockFiveHumid = document.querySelector(".b5-humid");
+    blockFiveHumid.textContent = "Humidity:  " + "XX" + "%";
 
 };
 
