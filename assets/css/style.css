@@ -57,7 +57,8 @@
 
 #current-weather {
     padding: 1vw 0;
-    border-bottom: 2px solid #ccc;
+    display: none;
+    /* border-bottom: 2px solid #ccc; */
 }
 .current-header {
     display: flex;
@@ -67,11 +68,11 @@
     /* justify-content: space-between; */
 }
 
-
 #five-day {
-    /* border: 1px solid green; */
     padding: 2vw 0 3vw;
+    border-top: 2px solid #ccc;
     border-bottom: 2px solid #ccc;
+    display: none;
 }
 
 .five-day-blocks {

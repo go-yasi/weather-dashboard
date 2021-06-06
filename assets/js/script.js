@@ -7,6 +7,9 @@ var currentWeather = document.querySelector("#current-weather");
 var fiveDay = document.querySelector("#five-day");
 
 function displayCurrentWeather() {
+    // make section appear
+    currentWeather.style.display = "block";
+    
     // create "current weather" header div
     var currentHeader = document.createElement("div");
     currentHeader.className = "current-header";
@@ -68,6 +71,9 @@ function displayCurrentWeather() {
 displayCurrentWeather();
 
 function displayFiveDay() {
+    // make section appear
+    fiveDay.style.display = "block";
+
     // *-------  BLOCK 1 -------*
     // new date
     var blockOneDate = document.querySelector(".b1-date");
