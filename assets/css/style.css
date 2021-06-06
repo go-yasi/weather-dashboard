@@ -26,6 +26,7 @@
     justify-content: center;
     align-items: center;
     padding: 2vw 0;
+    border-bottom: 2px solid #ccc;
     background: rgb(34,71,195);
     background: radial-gradient(circle, rgba(34,71,195,1) 0%, rgba(107,164,167,1) 26%, rgba(182,184,120,1) 50%, rgba(206,210,83,1) 75%, rgba(253,200,45,1) 100%);
     background-size: 220%;
@@ -88,4 +89,17 @@
     align-items: center;
     padding: 1em .5em;
     border-radius: 10px;
+    border: 2px solid #0d4563;
+}
+
+.blockhead {
+    background-color: white;
+    color: #083147;
+    width: 80%;
+    font-size: 1.4vw;
+    text-align: center;
+    padding: .4em 0;
+    border-radius: 8px;
+    margin-top: .3em;
+    border: 2px solid #0d4563;
 }

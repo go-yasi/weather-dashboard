@@ -76,6 +76,9 @@ function displayFiveDay() {
     // weather icon
     var blockOneIcon = document.querySelector(".b1-icon");
     blockOneIcon.src = "/assets/favicon/weather-app-favicon.png"
+    // temperature
+    var blockOneTemp = document.querySelector(".b1-temp");
+    blockOneTemp.textContent = "Temp:  " + "XX" + "°F";
 
     // add content to block 2
     // new date
@@ -84,6 +87,9 @@ function displayFiveDay() {
     // weather icon
     var blockTwoIcon = document.querySelector(".b2-icon");
     blockTwoIcon.src = "/assets/favicon/weather-app-favicon.png"
+    // temperature
+    var blockTwoTemp = document.querySelector(".b2-temp");
+    blockTwoTemp.textContent = "Temp:  " + "XX" + "°F";
 
     // add content to block 3
     // new date
@@ -92,6 +98,9 @@ function displayFiveDay() {
     // weather icon
     var blockThreeIcon = document.querySelector(".b3-icon");
     blockThreeIcon.src = "/assets/favicon/weather-app-favicon.png"
+    // temperature
+    var blockThreeTemp = document.querySelector(".b3-temp");
+    blockThreeTemp.textContent = "Temp:  " + "XX" + "°F";
 
     // add content to block 4
     // new date
@@ -100,6 +109,9 @@ function displayFiveDay() {
     // weather icon
     var blockFourIcon = document.querySelector(".b4-icon");
     blockFourIcon.src = "/assets/favicon/weather-app-favicon.png"
+    // temperature
+    var blockFourTemp = document.querySelector(".b4-temp");
+    blockFourTemp.textContent = "Temp:  " + "XX" + "°F";
 
     // add content to block 5
     // new date
@@ -108,6 +120,9 @@ function displayFiveDay() {
     // weather icon
     var blockFiveIcon = document.querySelector(".b5-icon");
     blockFiveIcon.src = "/assets/favicon/weather-app-favicon.png"
+    // temperature
+    var blockFiveTemp = document.querySelector(".b5-temp");
+    blockFiveTemp.textContent = "Temp:  " + "XX" + "°F";
 
 };
 
