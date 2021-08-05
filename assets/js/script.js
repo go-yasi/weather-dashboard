@@ -135,14 +135,26 @@ function displayCurrentWeather(data) {
 
     var currentUV = document.createElement("p");
     currentUV.className = "uv";
-    currentUV.textContent = "UV Index: " + data.current.uvi;
+    currentUV.textContent = "UV Index: ";
+    var valueUV = document.createElement("p");
+    valueUV.className = "uv-value";
+    valueUV.textContent = data.current.uvi;
 
+    // UV index color that indicates favorable, moderate, or severe
+    if (data.current.uvi < 5) {
+        valueUV.classList.add("favorable");
+    } else  if (data.current.uvi > 5 && data.current.uvi <=7) {
+        valueUV.classList.add("moderate");
+    } else {
+        valueUV.classList.add("severe");
+    };
 
     // add elements to current info div
     currentInfo.appendChild(currentTemp);
     currentInfo.appendChild(currentWind);
     currentInfo.appendChild(currentHumid);
     currentInfo.appendChild(currentUV);
+    currentUV.appendChild(valueUV);
 
     // add header and info to current weather div
     currentWeather.appendChild(currentHeader);

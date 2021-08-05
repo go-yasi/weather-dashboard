@@ -59,7 +59,7 @@ body {
 #weather-forecast {
     padding: 1vw 2vw;
 }
-
+/* CURRENT */
 #current-weather {
     padding: 1vw 0;
     display: none;
@@ -72,7 +72,6 @@ body {
     justify-content: center;
     /* justify-content: space-between; */
 }
-
 .current-city {
     text-transform: capitalize;
     margin: 1.68vw auto;
@@ -82,15 +81,32 @@ body {
     font-size: 12px;
     letter-spacing: .05em;;
 }
-
 .current-date {
     font-weight: 400;
 }
-
 .current-info {
     text-align: center;
 }
+/* uv index */
+.uv-value {
+    display:inline;
+    padding: .1em .4em .2em;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.favorable {
+    background-color: green;
+    color: white;
+}
+.moderate {
+    background-color: yellow;
+}
+.severe {
+    background-color: rgb(197, 9, 9);
+    color: white;
+}
 
+/* FIVE DAY */
 #five-day {
     padding: 2vw 0 3vw;
     border-top: 2px solid #ccc;
