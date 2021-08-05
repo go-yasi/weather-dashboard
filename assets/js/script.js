@@ -78,7 +78,6 @@ function displayCurrentWeather(data) {
         currentCity.textContent = searchInput;
     }
     
-
     // create "current weather" header zone
     var currentZone = document.createElement("h6");
     currentZone.className = "current-zone";
@@ -306,14 +305,14 @@ function loadHistory() {
         historyList.classList.add("btn", "history");
         historyList.addEventListener("click", function() {
             fetchCoordinates(displaySearches);
-            
+
         })
     }
 };
 
 // clear past searches
 function clearSearch() {
-    weatherForecast.remove();
+    document.querySelector("#weather-forecast").remove();
 }
 
 
