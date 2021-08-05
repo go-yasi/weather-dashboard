@@ -300,7 +300,7 @@ function getLocalStorage() {
 
 // load search history
 function loadHistory() {
-    for (let i = 0; i < searchArray.length; i++) {
+    for (let i = 0; i < 10; i++) {
         const displaySearches = searchArray[i];
         var historyList = document.createElement("div");
         searchHistory.appendChild(historyList);
