@@ -10,6 +10,7 @@ var searchBtn = document.querySelector("#search-btn");
 var weatherForecast = document.querySelector("#weather-forecast");
 var currentWeather = document.querySelector("#current-weather");
 var fiveDay = document.querySelector("#five-day");
+const weatherArray = [];
 
 // API variables
 const baseURL = "https://api.openweathermap.org/data/2.5/onecall?lat=";
@@ -20,15 +21,36 @@ function fetchCoordinates(searchInput) {
     var URL = "https://api.openweathermap.org/geo/1.0/direct?q=" + searchInput + APIkey;
 
     fetch(URL)
-        .then(function (res) {
-            return res.json();
-        })
-        .then(function (data) {
-            // lat & lon variables
-            var lat = data[0].lat;
-            var lon = "&lon=" + data[0].lon;
-            // add function to search using variables above
-        })
+    .then(function (res) {
+        return res.json();
+    })
+    .then(function (data) {
+        // lat & lon variables
+        var lat = data[0].lat;
+        var lon = "&lon=" + data[0].lon;
+        // add function to search using variables above
+    })
+};
+
+function search(lat, lon) {
+    var URL = baseURL + lat + lon + APIkey;
+
+    fetch(URL)
+    .then(function (res) {
+        return res.json();
+    })
+    .then(function (data) {
+        console.log(data);
+        var weather = {
+            city: data.name,
+            icon: data.current.weather[0].icon,
+            temp: data.current.temp,
+            wind: data.current.wind_speed,
+            humidity: data.current.humidity,
+            uvi: data.current.uvi
+        }
+        weatherArray.push(weather);
+    })
 }
 
 
