@@ -2,9 +2,10 @@
 var today = moment().format("dddd, MMMM Do, YYYY");
 
 // search variables
-var searchForm = document.querySelector("#search-form");
-var searchInput = document.querySelector("#search-input").value;
-var searchBtn = document.querySelector("#search-btn");
+const searchForm = document.querySelector("#search-form");
+const searchInput = document.querySelector("#search-input").value;
+const searchBtn = document.querySelector("#search-btn");
+var searchHistory = [];
 
 // weather variables
 var weatherForecast = document.querySelector("#weather-forecast");
@@ -16,7 +17,7 @@ const weatherArray = [];
 const baseURL = "https://api.openweathermap.org/data/2.5/onecall?lat=";
 const APIkey = "&exclude=hourly,minutely,alerts&appid=a15495c549d268a19702fa1fab37f8f8&units=imperial";
 
-// fetch request for lat & lon
+// fetch request for lat & lon of user input
 function fetchCoordinates(searchInput) {
     var URL = "https://api.openweathermap.org/geo/1.0/direct?q=" + searchInput + APIkey;
 
@@ -32,6 +33,7 @@ function fetchCoordinates(searchInput) {
     })
 };
 
+// fetch request to gather weather data
 function search(lat, lon) {
     var URL = baseURL + lat + lon + APIkey;
 
@@ -53,7 +55,20 @@ function search(lat, lon) {
         // call to display current weather
         // call to display fiveDay
     })
-}
+};
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+
+    if (!searchInput) {
+        alert("City not found. Please try again!");
+    } else {
+        // save user input to searchHistory array
+        searchHistory.push(searchInput);
+        // save to local storage
+        localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+    }
+};
 
 
 function displayCurrentWeather() {
@@ -220,6 +235,6 @@ function displayFiveDay() {
 };
 
 
-searchBtn.addEventListener("click", displayCurrentWeather);
+searchBtn.addEventListener("click", handleFormSubmit);
 
 
