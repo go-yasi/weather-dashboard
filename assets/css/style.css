@@ -73,6 +73,16 @@ body {
     /* justify-content: space-between; */
 }
 
+.current-city {
+    text-transform: capitalize;
+    margin: 1.68vw auto;
+}
+.current-zone {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .05em;;
+}
+
 .current-date {
     font-weight: 400;
 }

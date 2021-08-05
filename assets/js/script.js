@@ -52,7 +52,8 @@ function search(lat, lon) {
             uvi: data.current.uvi
         }
         weatherArray.push(weather);
-        // call to display current weather
+        // display current weather
+        displayCurrentWeather(data);
         // call to display fiveDay
     })
 };
@@ -76,7 +77,9 @@ function handleFormSubmit(event) {
 };
 
 
-function displayCurrentWeather() {
+function displayCurrentWeather(data) {
+    let searchInput = document.querySelector("#search-input").value;
+
     // make section appear
     currentWeather.style.display = "block";
 
@@ -87,7 +90,12 @@ function displayCurrentWeather() {
     // create "current weather" header city name
     var currentCity = document.createElement("h1");
     currentCity.className = "current-city display-6";
-    currentCity.textContent = "Example City Name";
+    currentCity.textContent = searchInput;
+
+    // create "current weather" header zone
+    var currentZone = document.createElement("h6");
+    currentZone.className = "current-zone";
+    currentZone.textContent = data.timezone;
 
     // create "current weather" header date
     var currentDate = document.createElement("h5");
@@ -97,11 +105,12 @@ function displayCurrentWeather() {
     // create "current weather" header icon
     var currentIcon = document.createElement("img");
     currentIcon.className = "current-icon";
-    currentIcon.src = "./assets/favicon/weather-app-favicon.png";
+    currentIcon.src = "https://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png";
     currentIcon.style.width = "50px";
 
     // add elements to current header div
     currentHeader.appendChild(currentCity);
+    currentHeader.appendChild(currentZone);
     currentHeader.appendChild(currentDate);
     currentHeader.appendChild(currentIcon);
 
@@ -112,21 +121,21 @@ function displayCurrentWeather() {
     // create "current weather" info: temp
     var currentTemp = document.createElement("p");
     currentTemp.className = "temp"; 
-    currentTemp.textContent = "Temp:  " + "XX" + "°F";
+    currentTemp.textContent = "Temp:  " + data.current.temp + "°F";
 
     // create "current weather" info: wind
     var currentWind = document.createElement("p");
     currentWind.className = "wind";
-    currentWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    currentWind.textContent = "Wind:  " + data.current.wind_speed + " MPH";
 
 
     var currentHumid = document.createElement("p");
     currentHumid.className = "humid";
-    currentHumid.textContent = "Humidity:  " + "XX" + "%";
+    currentHumid.textContent = "Humidity:  " + data.current.humidity + "%";
 
     var currentUV = document.createElement("p");
     currentUV.className = "uv";
-    currentUV.textContent = "UV Index:  " + "X.XX";
+    currentUV.textContent = "UV Index: " + data.current.uvi;
 
 
     // add elements to current info div
