@@ -5,7 +5,8 @@ var today = moment().format("dddd, MMMM Do, YYYY");
 const searchForm = document.querySelector("#search-form");
 const searchInput = document.querySelector("#search-input").value;
 const searchBtn = document.querySelector("#search-btn");
-var searchHistory = [];
+var searchHistory = document.querySelector("#search-history");
+var searchArray = [];
 
 // weather variables
 var weatherForecast = document.querySelector("#weather-forecast");
@@ -55,24 +56,6 @@ function search(lat, lon) {
         // display current weather
         displayCurrentWeather(data);
     })
-};
-
-// search form handler
-function handleFormSubmit(event) {
-    event.preventDefault();
-
-    let searchInput = document.querySelector("#search-input").value;
-
-    if (!searchInput) {
-        alert("City not found. Please try again!");
-    } else {
-        // save user input to searchHistory array
-        searchHistory.push(searchInput);
-        // save to local storage
-        localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-    }
-
-    fetchCoordinates(searchInput);
 };
 
 // display current weather data
@@ -269,14 +252,46 @@ function displayFiveDay(data) {
 
 };
 
-// create search history as a button
-function searchHistory() {
+// search form handler
+function handleFormSubmit(event) {
+    event.preventDefault();
+
+    let searchInput = document.querySelector("#search-input").value;
+
+    if (!searchInput) {
+        alert("City not found. Please try again!");
+    } else {
+        // save user input to search array
+        searchArray.push(searchInput);
+        // save to local storage
+        localStorage.setItem("searchArray", JSON.stringify(searchArray));
+    }
+
+    fetchCoordinates(searchInput);
+    searchButtons();
+};
+
+// create buttons for items in search history array
+function searchButtons() {
     var searches = document.createElement("button");
-    searches.className("btn", "history");
+    searches.classList.add("btn");
     searches.textContent = searchInput;
     searches.addEventListener("click", handleFormSubmit);
+    searchHistory.appendChild(searches);
+};
+
+// access info saved in local storage
+function getLocalStorage() {
+    if (localStorage.getItem("searchArray") === null || localStorage.getItem("searchArray") === "") {
+        searchArray = [];
+    } else {
+        searchArray = JSON.parse(localStorage.getItem("searchArray"));
+    }
+    console.log(searchArray);
 }
 
+
+// on click for search form
 searchBtn.addEventListener("click", handleFormSubmit);
 
-
+getLocalStorage();
