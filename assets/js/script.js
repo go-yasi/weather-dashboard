@@ -28,7 +28,7 @@ function fetchCoordinates(searchInput) {
         // lat & lon variables
         var lat = data[0].lat;
         var lon = "&lon=" + data[0].lon;
-        // add function to search using variables above
+        search(lat, lon);
     })
 };
 
@@ -50,6 +50,8 @@ function search(lat, lon) {
             uvi: data.current.uvi
         }
         weatherArray.push(weather);
+        // call to display current weather
+        // call to display fiveDay
     })
 }
 
