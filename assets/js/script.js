@@ -60,16 +60,21 @@ function search(lat, lon) {
 
 // display current weather data
 function displayCurrentWeather(data) {
-    let searchInput = document.querySelector("#search-input").value;
+    
 
     // make section appear
     currentWeather.style.display = "block";
+
+    // create weather block div
+    var weatherBlock = document.createElement("div");
+    weatherBlock.className = "must-go"
 
     // create "current weather" header div
     var currentHeader = document.createElement("div");
     currentHeader.className = "current-header";
 
     // create "current weather" header city name
+    let searchInput = document.querySelector("#search-input").value; 
     var currentCity = document.createElement("h1");
     currentCity.className = "current-city display-6";
     if (!searchInput) {
@@ -142,9 +147,12 @@ function displayCurrentWeather(data) {
     currentInfo.appendChild(currentUV);
     currentUV.appendChild(valueUV);
 
-    // add header and info to current weather div
-    currentWeather.appendChild(currentHeader);
-    currentWeather.appendChild(currentInfo);
+    // add header and info to weather block div
+    weatherBlock.appendChild(currentHeader);
+    weatherBlock.appendChild(currentInfo);
+
+    // add weather block to current weather div
+    currentWeather.appendChild(weatherBlock);
 
     // reset search input
     document.getElementById("search-input").value = "";
@@ -315,7 +323,7 @@ function loadHistory() {
 
 // clear past searches
 function clearSearch() {
-    document.querySelector("#weather-forecast").remove();
+    document.querySelector(".must-go").remove();
 }
 
 
