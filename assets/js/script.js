@@ -44,7 +44,7 @@ function search(lat, lon) {
     .then(function (data) {
         console.log(data);
         var weather = {
-            city: data.name,
+            // city: data.name,
             icon: data.current.weather[0].icon,
             temp: data.current.temp,
             wind: data.current.wind_speed,
@@ -57,8 +57,11 @@ function search(lat, lon) {
     })
 };
 
+// search form handler
 function handleFormSubmit(event) {
     event.preventDefault();
+
+    let searchInput = document.querySelector("#search-input").value;
 
     if (!searchInput) {
         alert("City not found. Please try again!");
@@ -68,6 +71,8 @@ function handleFormSubmit(event) {
         // save to local storage
         localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
     }
+
+    fetchCoordinates(searchInput);
 };
 
 
