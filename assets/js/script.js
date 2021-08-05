@@ -214,16 +214,18 @@ function displayFiveDay(data) {
     blockThreeDate.textContent = moment().add(3, "d").format("ddd M/DD");
     // weather icon
     var blockThreeIcon = document.querySelector(".b3-icon");
-    blockThreeIcon.src = "./assets/favicon/weather-app-favicon.png"
+    blockThreeIcon.src = "https://openweathermap.org/img/w/" + data.daily[2].weather[0].icon + ".png";
+    blockThreeIcon.style.width = "50px";
+    blockThreeIcon.style.height = "50px";
     // temperature
     var blockThreeTemp = document.querySelector(".b3-temp");
-    blockThreeTemp.textContent = "Temp:  " + "XX" + "°F";
+    blockThreeTemp.textContent = "Temp:  " + data.daily[2].temp.day + "°F";
     // wind
     var blockThreeWind = document.querySelector(".b3-wind");
-    blockThreeWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    blockThreeWind.textContent = "Wind:  " + data.daily[2].wind_speed + " MPH";
     // humidity
     var blockThreeHumid = document.querySelector(".b3-humid");
-    blockThreeHumid.textContent = "Humidity:  " + "XX" + "%";
+    blockThreeHumid.textContent = "Humidity:  " + data.daily[2].humidity + "%";
 
 
     // *-------  BLOCK 4 -------*
@@ -232,16 +234,18 @@ function displayFiveDay(data) {
     blockFourDate.textContent = moment().add(4, "d").format("ddd M/DD");
     // weather icon
     var blockFourIcon = document.querySelector(".b4-icon");
-    blockFourIcon.src = "./assets/favicon/weather-app-favicon.png"
+    blockFourIcon.src = "https://openweathermap.org/img/w/" + data.daily[3].weather[0].icon + ".png";
+    blockFourIcon.style.width = "50px";
+    blockFourIcon.style.height = "50px";
     // temperature
     var blockFourTemp = document.querySelector(".b4-temp");
-    blockFourTemp.textContent = "Temp:  " + "XX" + "°F";
+    blockFourTemp.textContent = "Temp:  " + data.daily[3].temp.day + "°F";
     // wind
     var blockFourWind = document.querySelector(".b4-wind");
-    blockFourWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    blockFourWind.textContent = "Wind:  " + data.daily[3].wind_speed + " MPH";
     // humidity
     var blockFourHumid = document.querySelector(".b4-humid");
-    blockFourHumid.textContent = "Humidity:  " + "XX" + "%";
+    blockFourHumid.textContent = "Humidity:  " + data.daily[3].humidity + "%";
 
 
     // *-------  BLOCK 5 -------*
@@ -250,16 +254,18 @@ function displayFiveDay(data) {
     blockFiveDate.textContent = moment().add(5, "d").format("ddd M/DD");
     // weather icon
     var blockFiveIcon = document.querySelector(".b5-icon");
-    blockFiveIcon.src = "./assets/favicon/weather-app-favicon.png"
+    blockFiveIcon.src = "https://openweathermap.org/img/w/" + data.daily[4].weather[0].icon + ".png";
+    blockFiveIcon.style.width = "50px";
+    blockFiveIcon.style.height = "50px";
     // temperature
     var blockFiveTemp = document.querySelector(".b5-temp");
-    blockFiveTemp.textContent = "Temp:  " + "XX" + "°F";
+    blockFiveTemp.textContent = "Temp:  " + data.daily[4].temp.day + "°F";
     // wind
     var blockFiveWind = document.querySelector(".b5-wind");
-    blockFiveWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    blockFiveWind.textContent = "Wind:  " + data.daily[4].wind_speed + " MPH";
     // humidity
     var blockFiveHumid = document.querySelector(".b5-humid");
-    blockFiveHumid.textContent = "Humidity:  " + "XX" + "%";
+    blockFiveHumid.textContent = "Humidity:  " + data.daily[4].humidity + "%";
 
 };
 
