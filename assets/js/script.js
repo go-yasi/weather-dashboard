@@ -3,13 +3,18 @@ var today = moment().format("dddd, MMMM Do, YYYY");
 
 // search variables
 var searchForm = document.querySelector("#search-form");
-var searchInput = document.querySelector("#search-input");
+var searchInput = document.querySelector("#search-input").value;
 var searchBtn = document.querySelector("#search-btn");
 
 // weather variables
 var weatherForecast = document.querySelector("#weather-forecast");
 var currentWeather = document.querySelector("#current-weather");
 var fiveDay = document.querySelector("#five-day");
+
+// API variables
+var baseURL = "https://api.openweathermap.org/data/2.5/onecall?lat=";
+var apiid = "&exclude=hourly,minutely,alerts&appid=a15495c549d268a19702fa1fab37f8f8&units=imperial";
+
 
 function displayCurrentWeather() {
     // make section appear
