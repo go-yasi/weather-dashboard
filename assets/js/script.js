@@ -274,6 +274,7 @@ function handleFormSubmit(event) {
 
     fetchCoordinates(searchInput);
     searchButtons();
+    clearSearch();
 };
 
 // create buttons for items in search history array
@@ -299,14 +300,20 @@ function getLocalStorage() {
 function loadHistory() {
     for (let i = 0; i < searchArray.length; i++) {
         const displaySearches = searchArray[i];
-        var historyDiv = document.createElement("div");
-        searchHistory.appendChild(historyDiv);
-        historyDiv.textContent = displaySearches;
-        historyDiv.classList.add("btn", "history");
-        historyDiv.addEventListener("click", function() {
+        var historyList = document.createElement("div");
+        searchHistory.appendChild(historyList);
+        historyList.textContent = displaySearches;
+        historyList.classList.add("btn", "history");
+        historyList.addEventListener("click", function() {
             fetchCoordinates(displaySearches);
+            
         })
     }
+};
+
+// clear past searches
+function clearSearch() {
+    weatherForecast.remove();
 }
 
 
