@@ -75,7 +75,7 @@ function handleFormSubmit(event) {
     fetchCoordinates(searchInput);
 };
 
-
+// display current weather data
 function displayCurrentWeather(data) {
     let searchInput = document.querySelector("#search-input").value;
 
@@ -163,7 +163,7 @@ function displayCurrentWeather(data) {
     displayFiveDay(data);
 };
 
-
+// display five-day forecast
 function displayFiveDay(data) {
     // make section appear
     fiveDay.style.display = "block";
@@ -269,6 +269,13 @@ function displayFiveDay(data) {
 
 };
 
+// create search history as a button
+function searchHistory() {
+    var searches = document.createElement("button");
+    searches.className("btn", "history");
+    searches.textContent = searchInput;
+    searches.addEventListener("click", handleFormSubmit);
+}
 
 searchBtn.addEventListener("click", handleFormSubmit);
 
