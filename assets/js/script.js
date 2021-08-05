@@ -146,6 +146,9 @@ function displayCurrentWeather(data) {
     currentWeather.appendChild(currentHeader);
     currentWeather.appendChild(currentInfo);
 
+    // reset search input
+    document.getElementById("search-input").value = "";
+
     // run five day forecast
     displayFiveDay(data);
 };
