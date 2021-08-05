@@ -12,8 +12,24 @@ var currentWeather = document.querySelector("#current-weather");
 var fiveDay = document.querySelector("#five-day");
 
 // API variables
-var baseURL = "https://api.openweathermap.org/data/2.5/onecall?lat=";
-var apiid = "&exclude=hourly,minutely,alerts&appid=a15495c549d268a19702fa1fab37f8f8&units=imperial";
+const baseURL = "https://api.openweathermap.org/data/2.5/onecall?lat=";
+const APIkey = "&exclude=hourly,minutely,alerts&appid=a15495c549d268a19702fa1fab37f8f8&units=imperial";
+
+// fetch request for lat & lon
+function fetchCoordinates(searchInput) {
+    var URL = "https://api.openweathermap.org/geo/1.0/direct?q=" + searchInput + APIkey;
+
+    fetch(URL)
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (data) {
+            // lat & lon variables
+            var lat = data[0].lat;
+            var lon = "&lon=" + data[0].lon;
+            // add function to search using variables above
+        })
+}
 
 
 function displayCurrentWeather() {
