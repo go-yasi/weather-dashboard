@@ -72,7 +72,12 @@ function displayCurrentWeather(data) {
     // create "current weather" header city name
     var currentCity = document.createElement("h1");
     currentCity.className = "current-city display-6";
-    currentCity.textContent = searchInput;
+    if (!searchInput) {
+        currentCity.textContent = "Current Weather";
+    } else {
+        currentCity.textContent = searchInput;
+    }
+    
 
     // create "current weather" header zone
     var currentZone = document.createElement("h6");
@@ -288,6 +293,20 @@ function getLocalStorage() {
         searchArray = JSON.parse(localStorage.getItem("searchArray"));
     }
     console.log(searchArray);
+};
+
+// load search history
+function loadHistory() {
+    for (let i = 0; i < searchArray.length; i++) {
+        const displaySearches = searchArray[i];
+        var historyDiv = document.createElement("div");
+        searchHistory.appendChild(historyDiv);
+        historyDiv.textContent = displaySearches;
+        historyDiv.classList.add("btn", "history");
+        historyDiv.addEventListener("click", function() {
+            fetchCoordinates(displaySearches);
+        })
+    }
 }
 
 
@@ -295,3 +314,4 @@ function getLocalStorage() {
 searchBtn.addEventListener("click", handleFormSubmit);
 
 getLocalStorage();
+loadHistory();

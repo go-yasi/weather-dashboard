@@ -44,7 +44,7 @@ body {
 }
 
 /* SEARCH SIDEBAR */
-.search-title {
+.search-title, .history-title {
     font-weight: 400;
 }
 #search-btn {
@@ -52,6 +52,13 @@ body {
     background: linear-gradient(0deg, rgb(28, 94, 156) 35%, rgba(0, 182, 214, 0.959) 100%);
     color: white;
     margin: 10px auto;
+}
+.history {
+    display: block;
+    margin: 1vw auto;
+    background: rgb(0, 180, 120);
+    background: linear-gradient(0deg, rgba(28, 156, 135, 0.911) 35%, rgba(0, 207, 214, 0.959) 100%);
+    color: white;
 }
 
 
