@@ -54,7 +54,6 @@ function search(lat, lon) {
         weatherArray.push(weather);
         // display current weather
         displayCurrentWeather(data);
-        // call to display fiveDay
     })
 };
 
@@ -161,11 +160,11 @@ function displayCurrentWeather(data) {
     currentWeather.appendChild(currentInfo);
 
     // run five day forecast
-    displayFiveDay();
+    displayFiveDay(data);
 };
 
 
-function displayFiveDay() {
+function displayFiveDay(data) {
     // make section appear
     fiveDay.style.display = "block";
 
@@ -175,16 +174,18 @@ function displayFiveDay() {
     blockOneDate.textContent = moment().add(1, "d").format("ddd M/DD");
     // weather icon
     var blockOneIcon = document.querySelector(".b1-icon");
-    blockOneIcon.src = "/assets/favicon/weather-app-favicon.png"
+    blockOneIcon.src = "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png";
+    blockOneIcon.style.width = "50px";
+    blockOneIcon.style.height = "50px";
     // temperature
     var blockOneTemp = document.querySelector(".b1-temp");
-    blockOneTemp.textContent = "Temp:  " + "XX" + "°F";
+    blockOneTemp.textContent = "Temp:  " + data.daily[0].temp.day + "°F";
     // wind
     var blockOneWind = document.querySelector(".b1-wind");
-    blockOneWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    blockOneWind.textContent = "Wind:  " + data.daily[0].wind_speed + " MPH";
     // humidity
     var blockOneHumid = document.querySelector(".b1-humid");
-    blockOneHumid.textContent = "Humidity:  " + "XX" + "%";
+    blockOneHumid.textContent = "Humidity:  " + data.daily[0].humidity + "%";
 
 
     // *-------  BLOCK 2 -------*
@@ -193,16 +194,18 @@ function displayFiveDay() {
     blockTwoDate.textContent = moment().add(2, "d").format("ddd M/DD");
     // weather icon
     var blockTwoIcon = document.querySelector(".b2-icon");
-    blockTwoIcon.src = "./assets/favicon/weather-app-favicon.png"
+    blockTwoIcon.src = "https://openweathermap.org/img/w/" + data.daily[1].weather[0].icon + ".png";
+    blockTwoIcon.style.width = "50px";
+    blockTwoIcon.style.height = "50px";
     // temperature
     var blockTwoTemp = document.querySelector(".b2-temp");
-    blockTwoTemp.textContent = "Temp:  " + "XX" + "°F";
+    blockTwoTemp.textContent = "Temp:  " + data.daily[1].temp.day + "°F";
     // wind
     var blockTwoWind = document.querySelector(".b2-wind");
-    blockTwoWind.textContent = "Wind:  " + "XX.X" + " MPH";
+    blockTwoWind.textContent = "Wind:  " + data.daily[1].wind_speed + " MPH";
     // humidity
     var blockTwoHumid = document.querySelector(".b2-humid");
-    blockTwoHumid.textContent = "Humidity:  " + "XX" + "%";
+    blockTwoHumid.textContent = "Humidity:  " + data.daily[1].humidity + "%";
 
 
     // *-------  BLOCK 3 -------*
