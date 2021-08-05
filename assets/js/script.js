@@ -1,11 +1,15 @@
 // current date via moment
 var today = moment().format("dddd, MMMM Do, YYYY");
 
-// create variables from elements in HTML
+// search variables
+var searchForm = document.querySelector("#search-form");
+var searchInput = document.querySelector("#search-input");
+var searchBtn = document.querySelector("#search-btn");
+
+// weather variables
 var weatherForecast = document.querySelector("#weather-forecast");
 var currentWeather = document.querySelector("#current-weather");
 var fiveDay = document.querySelector("#five-day");
-var searchBtn = document.querySelector("#search-btn")
 
 function displayCurrentWeather() {
     // make section appear
